@@ -1,10 +1,9 @@
-package com.demo.local.algorithm.linear;
+package com.salty.algorithm.linear;
 
-import com.xingren.common.utils.Asserts;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
-import lombok.NonNull;
+import org.springframework.util.Assert;
 
 
 /**
@@ -18,18 +17,18 @@ public class LruTest {
         cache.put(1, 1);
         cache.put(2, 2);
         cache.put(3, 3);
-        Asserts.isTrue(cache.get(2) == 2);
-        Asserts.isTrue(cache.get(1) == 1);
-        Asserts.isTrue(cache.get(4) == -1);
+        Assert.isTrue(cache.get(2) == 2);
+        Assert.isTrue(cache.get(1) == 1);
+        Assert.isTrue(cache.get(4) == -1);
         cache.put(2, 4);
-        Asserts.isTrue(cache.get(2) == 4);
+        Assert.isTrue(cache.get(2) == 4);
         cache.put(4, 4);
-        Asserts.isTrue(cache.get(4) == 4);
-        Asserts.isTrue(cache.get(3) == -1);
+        Assert.isTrue(cache.get(4) == 4);
+        Assert.isTrue(cache.get(3) == -1);
         cache.put(5, 5);
-        Asserts.isTrue(cache.get(1) == -1);
+        Assert.isTrue(cache.get(1) == -1);
         cache.put(6, 6);
-        Asserts.isTrue(cache.get(2) == -1);
+        Assert.isTrue(cache.get(2) == -1);
 
     }
 

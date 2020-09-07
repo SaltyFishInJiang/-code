@@ -1,9 +1,9 @@
-package com.demo.local.algorithm.linear;
+package com.salty.algorithm.linear;
 
-import com.xingren.common.utils.Asserts;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
+import org.springframework.util.Assert;
 
 import java.util.Objects;
 
@@ -25,10 +25,14 @@ public class PalindromeString {
     }
 
     public static void main(String[] args) {
-        Asserts.isTrue(_chargeIsPalindromeStringFirst(_generateString("112211")));
-        Asserts.isTrue(_chargeIsPalindromeStringFirst(_generateString("11211")));
-        Asserts.isTrue(_chargeIsPalindromeStringSecond(_generateString("112211")));
-        Asserts.isTrue(_chargeIsPalindromeStringSecond(_generateString("11211")));
+        Assert.isTrue(_chargeIsPalindromeStringFirst(_generateString("112211")));
+        Assert.isTrue(_chargeIsPalindromeStringFirst(_generateString("11211")));
+        Assert.isTrue(_chargeIsPalindromeStringSecond(_generateString("112211")));
+        Assert.isTrue(_chargeIsPalindromeStringSecond(_generateString("11211")));
+
+
+        Assert.isTrue(!_chargeIsPalindromeStringFirst(_generateString("11122211")));
+        Assert.isTrue(!_chargeIsPalindromeStringSecond(_generateString("112231211")));
     }
 
     private static boolean _chargeIsPalindromeStringFirst(Node head) {
@@ -78,7 +82,9 @@ public class PalindromeString {
             f = f.next;
             s = s.next.next;
         }
-        prev.next = null;
+        if (prev != null) {
+            prev.next = null;
+        }
         Node next = s == null ? f : f.next;
         Node newNode = _reverse(head);
 
