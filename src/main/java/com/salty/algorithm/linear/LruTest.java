@@ -7,6 +7,7 @@ import org.springframework.util.Assert;
 
 
 /**
+ * 链表实现简单lru缓存
  * @author ryan
  * @since 2020/09/03
  */
@@ -63,7 +64,9 @@ public class LruTest {
 
         public int get(int key) {
             Node hit = _getNode(key);
-            if (hit != null) return hit.val;
+            if (hit != null) {
+                return hit.val;
+            }
             return -1;
         }
 
@@ -100,7 +103,7 @@ public class LruTest {
                 _delNode();
             }
             list.head = new Node(key, value, list.head);
-            list.length ++;
+            list.length++;
         }
 
         private void _delNode() {
@@ -111,7 +114,7 @@ public class LruTest {
                 node = node.next;
             }
             if (prev != null) {
-                list.length --;
+                list.length--;
                 prev.next = null;
             }
         }

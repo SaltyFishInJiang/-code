@@ -8,6 +8,7 @@ import org.springframework.util.Assert;
 import java.util.Objects;
 
 /**
+ * 链表实现回文字符串判断
  * @author ryan
  * @since 2020/09/04
  */
