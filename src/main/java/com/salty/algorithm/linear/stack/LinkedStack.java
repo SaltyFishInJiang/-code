@@ -2,9 +2,6 @@ package com.salty.algorithm.linear.stack;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.val;
-
-import java.util.Arrays;
 
 /**
  * @author ryan
@@ -44,8 +41,6 @@ public class LinkedStack<T> implements Stack<T> {
     public T peek() {
         return head.val;
     }
-
-
 
     @Data
     @AllArgsConstructor

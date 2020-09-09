@@ -3,8 +3,6 @@ package com.salty.algorithm.linear;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
-import org.springframework.util.Assert;
-
 
 /**
  * 链表实现简单lru缓存

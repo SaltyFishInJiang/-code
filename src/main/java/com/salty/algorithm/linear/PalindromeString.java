@@ -3,9 +3,6 @@ package com.salty.algorithm.linear;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
-import org.springframework.util.Assert;
-
-import java.util.Objects;
 
 /**
  * 链表实现回文字符串判断
