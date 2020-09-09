@@ -25,18 +25,7 @@ public class PalindromeString {
         Node next;
     }
 
-    public static void main(String[] args) {
-        Assert.isTrue(_chargeIsPalindromeStringFirst(_generateString("112211")));
-        Assert.isTrue(_chargeIsPalindromeStringFirst(_generateString("11211")));
-        Assert.isTrue(_chargeIsPalindromeStringSecond(_generateString("112211")));
-        Assert.isTrue(_chargeIsPalindromeStringSecond(_generateString("11211")));
-
-
-        Assert.isTrue(!_chargeIsPalindromeStringFirst(_generateString("11122211")));
-        Assert.isTrue(!_chargeIsPalindromeStringSecond(_generateString("112231211")));
-    }
-
-    private static boolean _chargeIsPalindromeStringFirst(Node head) {
+    public static boolean chargeIsPalindromeStringFirst(Node head) {
         Node newNode = _reverseAndGenerate(head);
         return _charge(head, newNode);
     }
@@ -74,7 +63,7 @@ public class PalindromeString {
         return prev;
     }
 
-    private static boolean _chargeIsPalindromeStringSecond(Node head) {
+    public static boolean chargeIsPalindromeStringSecond(Node head) {
         Node f = head;
         Node s = head;
         Node prev = null;
@@ -90,18 +79,5 @@ public class PalindromeString {
         Node newNode = _reverse(head);
 
         return _charge(next, newNode);
-    }
-
-    private static Node _generateString(String s) {
-        Objects.requireNonNull(s);
-        s = s.trim();
-        Node[] nodes = new Node[s.length()];
-        for (int i = 0; i < s.toCharArray().length; i++) {
-            nodes[i] = new Node(s.charAt(i), null);
-            if (i > 0) {
-                nodes[i - 1].next = nodes[i];
-            }
-        }
-        return nodes[0];
     }
 }
