@@ -1,4 +1,4 @@
-package com.salty.algorithm.linear;
+package com.salty.algorithm.linear.linkedlist;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

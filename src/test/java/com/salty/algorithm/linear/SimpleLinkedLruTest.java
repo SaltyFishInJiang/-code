@@ -1,9 +1,8 @@
 package com.salty.algorithm.linear;
 
+import com.salty.algorithm.linear.linkedlist.LruCache;
 import org.junit.Test;
 import org.springframework.util.Assert;
-
-import static org.junit.Assert.*;
 
 public class SimpleLinkedLruTest {
 

@@ -1,12 +1,13 @@
 package com.salty.algorithm.linear;
 
+import com.salty.algorithm.linear.linkedlist.PalindromeString;
 import org.junit.Test;
 import org.springframework.util.Assert;
 
 import java.util.Objects;
 
-import static com.salty.algorithm.linear.PalindromeString.chargeIsPalindromeStringFirst;
-import static com.salty.algorithm.linear.PalindromeString.chargeIsPalindromeStringSecond;
+import static com.salty.algorithm.linear.linkedlist.PalindromeString.chargeIsPalindromeStringFirst;
+import static com.salty.algorithm.linear.linkedlist.PalindromeString.chargeIsPalindromeStringSecond;
 
 public class PalindromeStringTest {
 

@@ -1,4 +1,4 @@
-package com.salty.algorithm.linear;
+package com.salty.algorithm.linear.linkedlist;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,11 +15,11 @@ public class PalindromeString {
 
     @AllArgsConstructor
     @Getter
-    static class Node {
+    public static class Node {
 
         char c;
 
-        Node next;
+        public Node next;
     }
 
     public static boolean chargeIsPalindromeStringFirst(Node head) {
