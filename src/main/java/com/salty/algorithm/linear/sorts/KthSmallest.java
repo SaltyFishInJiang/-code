@@ -1,6 +1,7 @@
 package com.salty.algorithm.linear.sorts;
 
 /**
+ * 第 k 小的值
  * @author ryan
  * @since 2020/09/16
  */
