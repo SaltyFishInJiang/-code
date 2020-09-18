@@ -18,8 +18,7 @@ public class LastEqualSearch {
                 } else {
                     i = mid + 1;
                 }
-            }
-            if (arr[mid] > n) {
+            } else if (arr[mid] > n) {
                 j = mid - 1;
             } else {
                 i = mid + 1;
@@ -29,7 +28,7 @@ public class LastEqualSearch {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 4, 4, 6, 7, 8, 8, 12, 15, 15, 35};
+        int[] arr = {5,7,7,8,8,10};
         System.out.println(search(arr, 1));
         System.out.println(search(arr, 5));
         System.out.println(search(arr, 8));

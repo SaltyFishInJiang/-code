@@ -11,7 +11,6 @@ public class CycleBinarySearch {
         if (nums == null || nums.length == 0) {
             return -1;
         }
-        int len = nums.length;
         int l = 0;
         int r = nums.length - 1;
         while (l <= r) {
