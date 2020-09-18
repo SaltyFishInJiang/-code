@@ -1,6 +1,7 @@
 package com.salty.algorithm.linear.binarysearch;
 
 /**
+ * 旋转数组二分查找
  * @author ryan
  * @since 2020/09/18
  */
